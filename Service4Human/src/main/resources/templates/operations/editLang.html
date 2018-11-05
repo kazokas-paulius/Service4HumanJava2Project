@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/header :: header"></div>
+		<div class="container">
+
+			<form class="form-horizontal" th:object="${editLang}"
+				th:action="@{/update}" name="edit_form" id="edit_form" method="post"
+				role="form">
+				<br>
+				<input type="hidden" th:field="*{provId}" /> <input type="hidden"
+					th:field="*{langId}" /> <input type="text" th:field="*{first}" />
+				<input type="text" th:field="*{second}" /> <input type="text"
+					th:field="*{work}" /> <input type="text" th:field="*{free}" /> <input
+					type="text" th:field="*{price}" /> <input type="submit"
+					name="fsubmit" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+<!--
+	<form style="float: left" action="/save/id" method="post">
+ -->

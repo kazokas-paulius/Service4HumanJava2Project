@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/header :: header"></div>
+		<div class="container">
+			<table class="table table-bordered table-hover horizontal-align">
+				<thead>
+					<tr>
+						<th style="width: 5%">User Name</th>
+						<th style="width: 5%">Provider Name</th>
+						<th style="width: 5%">Language From</th>
+						<th style="width: 5%">Language To</th>
+						<th style="width: 5%">Price (€/hour)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td th:text="${user_name}" style="text-align: center"></td>
+						<td th:text="${provider_name}" style="text-align: center"></td>
+						<td th:text="${lang_from}" style="text-align: center"></td>
+						<td th:text="${lang_to}" style="text-align: center"></td>
+						<td th:text="${price}" style="text-align: center"></td>
+					</tr>
+				</tbody>
+			</table>
+			<textarea style="width: 100%; resize: none; rows: 20; min-height: 30vw"></textarea>
+			<button class="btn btn-danger" type="submit" style="margin-top: 0.35rem">Confirm Order</button>
+		</div>
+	</div>
+</body>
+</html>

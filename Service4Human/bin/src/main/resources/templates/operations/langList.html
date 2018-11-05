@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/header :: header"></div>
+		<div class="container">
+
+			<table class="table table-bordered table-hover horizontal-align">
+				<thead>
+					<tr>
+						<th style="width: 5%">1 Language</th>
+						<th style="width: 5%">2 Language</th>
+						<th style="width: 5%">Free from</th>
+						<th style="width: 5%">Change</th>
+						<th style="width: 5%">Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr th:each="lang : ${languages}">
+						<td th:text="${lang.first}" style="text-align: center"></td>
+						<td th:text="${lang.second}" style="text-align: center"></td>
+						<td th:text="${lang.free}" style="text-align: center"></td>
+
+						<td style="text-align: center"><a
+							th:href="@{'/edit/{id}'(id=${lang.langId})}">Edit</a></td>
+						<td style="text-align: center"><a
+							th:href="@{'/delete/{id}'(id=${lang.langId})}">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="#" th:href="@{/newLang}"><button>New language</button></a>
+		</div>
+	</div>
+</body>
+</html>
+<!--
+	<form style="width: 100%" th:action="@{/save/id}" method="post">
+		<input type="hidden" name="fid" th:value="${editLang?.langId}" /> <input
+			type="text" name="ffirst" th:value="${editLang?.first}" /> <input
+			type="text" name="fsecond" th:value="${editLang?.second}" /> <input
+			type="text" name="fwork" th:value="${editLang?.work}" /> <input
+			type="text" name="ffree" th:value="${editLang?.free}" /> <input
+			type="text" name="fprice" th:value="${editLang?.price}" /> <input
+			type="submit" name="fsubmit" />
+	</form>
+				<th style="width: 5%">Done</th>
+            <th style="width: 5%">#</th>
+            <th style="width: 60%">Message</th>
+            <th class="dropdown" style="width: 20%">Date
+                <a th:href="@{'/view/{sortView}' (sortView = 'all')}">All</a>
+                <a th:href="@{'/view/{sortView}' (sortView = 'free')}">Will by free</i></a>
+            </th>
+            <td th:text="${#dates.format(note.date, 'EEE, d MMM yyyy HH:mm')}" style="text-align: center">Date</td>
+            <td style="text-align: center">
+                <i th:if="${note.done} == true" class="fa fa-plus-square-o" style="font-size:20px;color:#337ab7"></i>
+                <i th:if="${note.done} == false" class="fa fa-minus-square-o" style="font-size:20px;color:#337ab7"></i>
+            </td>
+            <td style="text-align: center"><a th:href="@{'/edit/{id}'(id=${note.id})}"><i class="fa fa-edit" style="font-size:20px"></i></a></td>
+            <td style="text-align: center"><a th:href="@{'/delete/{id}'(id=${note.id})}"><i class="fa fa-trash" style="font-size:20px"></i></a></td>
+            <td th:text="${prov.free}">Free</td>
+ -->

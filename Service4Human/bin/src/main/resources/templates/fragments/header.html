@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="eng"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header">
+    <nav class="navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" th:href="@{/}">Menu</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" th:href="@{/login}">Login</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" th:href="@{'/create/{id}' (id=${provId})}">Create/Edit</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="#" th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</html>

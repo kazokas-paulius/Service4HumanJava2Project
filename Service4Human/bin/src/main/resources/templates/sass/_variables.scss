@@ -1,0 +1,71 @@
+// title
+$title-background-color: rgb(26, 56, 104);
+$title-font-color: rgb(239, 239, 239);
+$title-font: 3vh;
+$title-text-align: center;
+$title-margin: 0px;
+$title-padding: 0.5em;
+
+// navbar
+$nav-background-color: rgb(58, 68, 84);
+$nav-font-color: rgb(239, 239, 239);
+$nav-font: 1rem;
+$nav-text-align: justify;
+$nav-margin: 2px;
+$nav-padding: 0px 1px;
+
+// content
+$content-background-color: rgb(19, 41, 76);
+$content-font-color: rgb(239, 239, 239);
+$content-font: 2vh;
+$content-text-align: justify;
+$content-margin: 0px;
+$content-padding: 0.1em 0.2em;
+
+// body
+$body-width: 100%;
+$body-heigh: 100%;
+$body-padding: 0px;
+$body-margin: 0px;
+$body-font-family: 'Raleway', sans-serif;
+$body-font: 2vh;
+
+// header
+$header-width: inherit;
+$header-background-color: rgb(86, 61, 124);
+
+// nav
+$nav-width: inherit;
+$nav-height: inherit;
+$nav-min-heigh: 4rem;
+$nav-position: relative;
+$nav-display: flex;
+
+// ul
+$ul-width: 100%;
+$ul-position: relative;
+$ul-list-style-type: none;
+$ul-webkit-padding-start: 10px;
+$ul-webkit-padding-end: 10px;
+
+// li
+$li-display: inline-block;
+$li-font: 1rem;
+// li first child
+$li-first-child-font-weight: bold;
+// li from 2 till last but not last
+$li-2ToBeforeLast-child-font-weight: 300;
+// li second child padding left
+$li-second-child-padding-left: 60px;
+// li 2n + 3 child padding left
+$li-2nTo3-child-padding-left: 15px;
+// li 3n + 4 child padding left
+$li-3nTo4-child-padding-left: 15px;
+// li last child
+$li-last-child-float: right;
+$li-last-child-padding-right: 20px;
+
+// a
+$a-text-decoration: none;
+$a-font-color: rgba(255,255,255,.75);
+$a-hover-color: rgba(255,255,255, 1);;

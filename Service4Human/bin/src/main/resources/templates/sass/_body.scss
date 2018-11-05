@@ -1,0 +1,11 @@
+@import "_variables.scss";
+
+body {
+    width: $body-width;
+    height: $body-heigh;
+    padding: $body-padding;
+    margin: $body-margin;
+    font-family: $body-font-family;
+    font-size: $body-font;
+    min-width: 880px;  // fix this
+}

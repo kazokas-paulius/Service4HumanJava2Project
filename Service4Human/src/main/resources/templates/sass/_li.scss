@@ -1,0 +1,39 @@
+li:first-child {
+    font-weight: $li-first-child-font-weight;
+    font-size: 1.3rem;
+}
+
+li:nth-child(2n):not(:last-child) {
+    font-weight: $li-2ToBeforeLast-child-font-weight;
+    font-size: 1rem !important;
+}
+
+li:nth-child(2) {
+    padding-left: $li-second-child-padding-left;
+}
+
+li:nth-child(3) {
+    font-size: 1rem !important;
+}
+
+li:nth-child(2n+3) {
+    padding-left: $li-2nTo3-child-padding-left;
+}
+
+li:nth-child(3n+4) {
+    padding-left: $li-3nTo4-child-padding-left;
+}
+
+li {
+    display: $li-display;
+    font-size: $li-font;
+    // center li elements
+    padding-top: .3125rem !important;
+    padding-bottom: .3125rem !important;
+}
+
+li:last-child {
+    float: $li-last-child-float;
+    padding-right: $li-last-child-padding-right;
+    font-size: 1.3rem;
+}

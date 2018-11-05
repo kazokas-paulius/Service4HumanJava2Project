@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header">
+	<nav class="navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav" style="flex-direction: row;">
+					<li><a class="navbar-brand" th:href="@{/}">Menu</a></li>
+					<li>
+						<div th:if="${session.provId==0}">
+							<a class="navbar-brand" href="#" th:href="@{/login}">Login</a>
+						</div>
+					</li>
+					<li>
+						<div th:unless="${session.provId==0}">
+							<a class="navbar-brand" href="#" th:href="@{/logout}">Logout</a>
+						</div>
+					</li>
+					<li><a class="navbar-brand" href="#"
+						th:href="@{'/create/{id}' (id=${session.provId})}">
+							<div th:if="${session.provId == 0}">Create new</div>
+							<div th:unless="${session.provId == 0}">Edit profile</div>
+							<div th:text="${session.provId}"></div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+</html>

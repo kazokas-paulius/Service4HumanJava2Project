@@ -1,0 +1,55 @@
+@import "_variables.scss";
+
+// button
+@mixin buttons($btn-padding, $btn-background-color, $btn-font-color,
+              $btn-border-radius, $btn-hover-color, $btn-background,
+              $btn-border) {
+    padding: $btn-padding;
+    background-color: $btn-background-color;
+    color: $btn-font-color;
+    border-radius: $btn-border-radius;
+    &:hover{
+        background-color: $btn-hover-color;
+    }
+    background: $btn-background;
+    border: $btn-border;
+}
+
+.button {
+    // login button
+    &.login-button{
+        @include buttons(
+            0px,
+            rgb(191, 87, 136),
+            rgba(255, 255, 255, 0.75),
+            4px,
+            rgba(255, 255, 255, 1),
+            inherit,
+            0.5px
+        );
+    }
+    // register button
+    &.register-button{
+        @include buttons(
+            0px,
+            rgb(87, 88, 191),
+            rgba(255, 255, 255, 0.75),
+            4px,
+            rgba(255, 255, 255, 1),
+            inherit,
+            0.5px
+        );
+    }
+    // nav-user button
+    &.nav-user-button{
+        @include buttons(
+            0px,
+            rgb(86, 61, 124),
+            rgba(255, 255, 255, 0.75),
+            4px,
+            rgba(255, 255, 255, 1),
+            inherit,
+            0.5px
+        );
+    }
+}

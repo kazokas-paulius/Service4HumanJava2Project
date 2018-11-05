@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS user.statistics
+(id INT AUTO_INCREMENT PRIMARY KEY,
+`total` INT,
+`free` INT ,
+`timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP);

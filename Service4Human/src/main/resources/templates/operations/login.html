@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+	<div class="container">
+		<div th:replace="fragments/header :: header"></div>
+		<div class="container">
+
+			<form class="form-horizontal" th:action="@{/login}" name="input_form"
+				id="input_form" method="post" role="form">
+				<div class="form-group">
+				<br>
+				<div>User name</div>
+					<input type="text" class="form-control" id="username"
+						th:name="username" placeholder="name" maxlength="25" /> <br>
+				<div>Password</div>
+					<input type="password" class="form-control" id="password"
+						th:name="password" placeholder="password" maxlength="20" /> <br>
+					<div th:if="${error != null}" th:text="${error}">
+						<br>
+					</div>
+					<button type="submit" class="btn btn-primary">Enter</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+<!--
+					    <div th:if="${not #lists.isEmpty(languages)}">
+        <div th:replace="operations/languageList :: languages"></div>
+    </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+                 <div style="text-align: center"><a th:href="@{'/use/{id}'(id=${lang.langId})}">
+                 </a></td>
+	<form th:action="@{/login}" method="post">
+ -->
